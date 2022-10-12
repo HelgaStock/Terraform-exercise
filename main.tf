@@ -1,15 +1,3 @@
-## How to start
-### Install
-Install terraform:
-```
-brew install terraform
-```
-### Create a new Project
-
-Create a folder with a terraform file
-
-For example as you see it [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs):
-```
 terraform {
   required_providers {
     aws = {
@@ -19,23 +7,13 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
 provider "aws" {
   region = "us-west-2"
 }
 
-# Create a VPC
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/16"
 }
-```
 
-Init terraform
-```
-terraform init
-```
 
-Apply Changes with (You need credentials!!)
-```
-terraform apply
-```
+
